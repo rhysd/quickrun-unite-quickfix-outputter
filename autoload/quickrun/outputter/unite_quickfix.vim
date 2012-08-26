@@ -9,7 +9,7 @@ if !exists('g:quickrun_unite_quickfix_outputter_args')
 endif
 
 if !exists('g:quickrun_unite_quickfix_outputter_unite_context')
-    let g:quickrun_unite_quickfix_outputter_unite_context = []
+    let g:quickrun_unite_quickfix_outputter_unite_context = {}
 endif
 
 let s:outputter = quickrun#outputter#buffered#new()
@@ -29,7 +29,7 @@ function! s:outputter.finish(session)
 
   " update Hier highlight
   if exists('g:hier_enabled')
-      :HierUpdate
+      HierUpdate
   endif
 endfunction
 
