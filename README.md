@@ -1,26 +1,26 @@
-# QuickRun Outputter for unite-qf
+# vim-quickrun outputter for Unite-quickfix
 
-QuickRun result outputter for unite-qf.
+QuickRun result outputter for unite-quickfix.
 
-- quickrun: https://github.com/thinca/vim-quickrun
-- unite-qf: https://github.com/sgur/unite-qf
+- quickrun:       https://github.com/thinca/vim-quickrun
+- unite-quickfix: https://github.com/osyo-manga/unite-quickfix
 
 ##Installation
 
-`NeoBundle 'rhysd/quickrun-unite-qf-outputter'`
+`NeoBundle 'rhysd/quickrun-unite-quickfix-outputter'`
 
 ##Usage
 
-specify `unite_qf` as quickrun outputter.
+specify `unite_quickfix` as quickrun outputter.
 
 Example:
 
-    let g:quickrun_config._ = { 'outputter' : 'unite_qf' }
+    let g:quickrun_config._ = { 'outputter' : 'unite_quickfix' }
 
 ##Variable
 
-`g:quickrun_unite_qf_outputter_args` is list of argment.
-This list is passed as unite-qf arguments.
+`g:quickrun_unite_quickfix_outputter_args` is list of argment.
+This list is passed as unite-quickfix arguments.
 
 ##License: MIT License
 
