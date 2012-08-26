@@ -1,12 +1,16 @@
 " Author : rhysd <lin90162@yahoo.co.jp>
 " License: MIT License http://www.opensource.org/licenses/mit-license.php
 
+let s:save_cpo = &cpo
+set cpo&vim
+
 if !exists('g:quickrun_unite_quickfix_outputter_args')
     let g:quickrun_unite_quickfix_outputter_args = []
 endif
 
-let s:save_cpo = &cpo
-set cpo&vim
+if !exists('g:quickrun_unite_quickfix_outputter_unite_context')
+    let g:quickrun_unite_quickfix_outputter_unite_context = []
+endif
 
 let s:outputter = quickrun#outputter#buffered#new()
 let s:outputter.config = {
@@ -18,7 +22,7 @@ function! s:outputter.finish(session)
     let errorformat = &l:errorformat
     let &l:errorformat = self.config.errorformat
     cgetexpr self._result
-    call unite#start( extend(['quickfix'], g:quickrun_unite_quickfix_outputter_args) )
+     call unite#start( extend(['quickfix'], g:quickrun_unite_quickfix_outputter_args), g:quickrun_unite_quickfix_outputter_unite_context )
   finally
     let &l:errorformat = errorformat
   endtry

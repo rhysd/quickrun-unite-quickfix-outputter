@@ -22,6 +22,15 @@ Example:
 `g:quickrun_unite_quickfix_outputter_args` is list of argment.
 This list is passed as unite-quickfix arguments.
 
+`g:quickrun_unite_quickfix_outputter_unite_context` is dictionary.
+This dictionary is passed as context of unite.
+For example, if you don't want to open unite-quickfix with insert-mode,
+below setting is available.
+
+    let g:quickrun_unite_quickfix_outputter_unite_context = {'start_insert' : 0}
+
+Please check unite.vim help for more information.
+
 ##License: MIT License
 
     Copyright (c) 2012 rhysd
