@@ -7,7 +7,6 @@ let s:hook.config = {
             \ }
 
 function! s:hook.on_exit(...)
-    echo "hooked!"
     if exists('g:hier_enabled')
         HierUpdate
     endif
