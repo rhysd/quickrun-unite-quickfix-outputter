@@ -17,6 +17,14 @@ Example:
 
     let g:quickrun_config._ = { 'outputter' : 'unite_quickfix' }
 
+##Hook for Hier.vim
+
+If you use Hier.vim, `hier_update` hook is available to update Hier.vim's highlight automatically.
+
+Example:
+
+    let g:quickrun_config._ = { 'outputter' : 'unite_quickfix', 'hook/hier_update/enable' : 1 }
+
 ##Variable
 
 `g:quickrun_unite_quickfix_outputter_args` is list of argment.

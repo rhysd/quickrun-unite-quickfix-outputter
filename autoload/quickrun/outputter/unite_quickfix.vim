@@ -22,15 +22,10 @@ function! s:outputter.finish(session)
     let errorformat = &l:errorformat
     let &l:errorformat = self.config.errorformat
     cgetexpr self._result
-     call unite#start( extend(['quickfix'], g:quickrun_unite_quickfix_outputter_args), g:quickrun_unite_quickfix_outputter_unite_context )
+    call unite#start( extend(['quickfix'], g:quickrun_unite_quickfix_outputter_args), g:quickrun_unite_quickfix_outputter_unite_context )
   finally
     let &l:errorformat = errorformat
   endtry
-
-  " update Hier highlight
-  if exists('g:hier_enabled')
-      HierUpdate
-  endif
 endfunction
 
 function! quickrun#outputter#unite_quickfix#new()
